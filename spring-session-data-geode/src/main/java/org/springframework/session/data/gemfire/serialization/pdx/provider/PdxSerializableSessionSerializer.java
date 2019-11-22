@@ -61,7 +61,6 @@ public class PdxSerializableSessionSerializer extends AbstractPdxSerializableSes
 			writer.writeLong("maxInactiveIntervalInSeconds", session.getMaxInactiveInterval().getSeconds());
 			writer.writeString("principalName", session.getPrincipalName());
 			writer.writeObject("attributes", newMap(session.getAttributes()));
-			writer.markIdentityField("id");
 		}
 	}
 
